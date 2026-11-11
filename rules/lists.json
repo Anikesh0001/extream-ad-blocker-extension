@@ -1,0 +1,122 @@
+[
+  {
+    "id": "ads",
+    "title": "EasyList — ads",
+    "desc": "The core ad-blocking list.",
+    "rec": true,
+    "safe": false,
+    "cosmetic": true,
+    "rules": 48951,
+    "url": "https://easylist.to/easylist/easylist.txt"
+  },
+  {
+    "id": "privacy",
+    "title": "EasyPrivacy — trackers",
+    "desc": "Blocks tracking and analytics.",
+    "rec": true,
+    "safe": false,
+    "cosmetic": true,
+    "rules": 56521,
+    "url": "https://easylist.to/easylist/easyprivacy.txt"
+  },
+  {
+    "id": "adguard",
+    "title": "AdGuard Base",
+    "desc": "Extra ad rules (overlaps EasyList).",
+    "rec": false,
+    "safe": false,
+    "cosmetic": true,
+    "rules": 70207,
+    "url": "https://filters.adtidy.org/extension/chromium/filters/2.txt"
+  },
+  {
+    "id": "cookies",
+    "title": "Cookie notices",
+    "desc": "Hides cookie-consent banners.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": true,
+    "rules": 2105,
+    "url": "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt"
+  },
+  {
+    "id": "annoyances",
+    "title": "Annoyances — popups, widgets",
+    "desc": "In-page popups, overlays, nags.",
+    "rec": false,
+    "safe": false,
+    "cosmetic": true,
+    "rules": 4141,
+    "url": "https://secure.fanboy.co.nz/fanboy-annoyance.txt"
+  },
+  {
+    "id": "social",
+    "title": "Social widgets",
+    "desc": "Facebook/X/etc. share buttons.",
+    "rec": false,
+    "safe": false,
+    "cosmetic": true,
+    "rules": 655,
+    "url": "https://secure.fanboy.co.nz/fanboy-social.txt"
+  },
+  {
+    "id": "badware",
+    "title": "Badware & scam sites",
+    "desc": "Known malware and scam hosts.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": false,
+    "rules": 263,
+    "url": "https://ublockorigin.pages.dev/filters/badware.txt"
+  },
+  {
+    "id": "privacyubo",
+    "title": "uBlock — privacy",
+    "desc": "Extra privacy protections.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": true,
+    "rules": 872,
+    "url": "https://ublockorigin.pages.dev/filters/privacy.txt"
+  },
+  {
+    "id": "resource",
+    "title": "uBlock — resource abuse",
+    "desc": "Stops cryptominers & abuse.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": false,
+    "rules": 17,
+    "url": "https://ublockorigin.pages.dev/filters/resource-abuse.txt"
+  },
+  {
+    "id": "anticv",
+    "title": "Anti-adblock defuser",
+    "desc": "Beats \"disable your ad blocker\" walls.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": true,
+    "rules": 2169,
+    "url": "https://easylist-downloads.adblockplus.org/abp-filters-anti-cv.txt"
+  },
+  {
+    "id": "quickfixes",
+    "title": "uBlock — quick fixes",
+    "desc": "Fast site-breakage & anti-adblock fixes.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": true,
+    "rules": 73,
+    "url": "https://ublockorigin.pages.dev/filters/quick-fixes.txt"
+  },
+  {
+    "id": "unbreak",
+    "title": "uBlock — unbreak",
+    "desc": "Un-breaks sites over-blocked by filters.",
+    "rec": true,
+    "safe": true,
+    "cosmetic": true,
+    "rules": 957,
+    "url": "https://ublockorigin.pages.dev/filters/unbreak.txt"
+  }
+]

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdSweep — network logger</title>
+  <link rel="stylesheet" href="logger.css" />
+</head>
+<body>
+  <header>
+    <h1>Network logger</h1>
+    <div class="controls">
+      <select id="tabSelect"></select>
+      <input id="filter" type="search" placeholder="Filter by domain or type…" />
+      <label class="chk"><input type="checkbox" id="auto" checked /> Live</label>
+      <button id="clear" class="btn">Clear</button>
+    </div>
+  </header>
+  <div class="summary" id="summary"></div>
+  <table>
+    <thead><tr><th>Time</th><th>Type</th><th>Blocked request</th><th>List</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="empty" id="empty">Nothing blocked on this tab yet. Browse an ad-heavy page and it'll fill up.</p>
+  <script src="logger.js"></script>
+</body>
+</html>

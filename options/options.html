@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdSweep settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="../icons/icon128.png" alt="" width="40" height="40" />
+      <div>
+        <h1>AdSweep</h1>
+        <p class="sub">Fast, private, open ad &amp; tracker blocker — everything stays on your device.</p>
+      </div>
+    </header>
+
+    <div id="welcome" class="banner" hidden>
+      🎉 <b>AdSweep is on.</b> The recommended lists are blocking ads and trackers right now.
+      Pin the icon to your toolbar to see counts and toggle any site.
+    </div>
+
+    <section class="card stats-card">
+      <div class="big-stat"><div class="n" id="total">0</div><div class="l">requests blocked, all time</div></div>
+      <div class="big-stat"><div class="n" id="today">0</div><div class="l">today</div></div>
+      <div class="big-stat"><div class="n" id="budget">0</div><div class="l">rule budget left</div></div>
+      <button id="resetStats" class="mini">Reset stats</button>
+    </section>
+
+    <section class="card">
+      <h2>Filter lists</h2>
+      <p class="hint">Bigger lists block more but use more of Chrome's rule budget (a browser limit, not ours). Everything together fits — if a list ever can't, AdSweep tells you.</p>
+      <div class="list-actions">
+        <button id="enableAll" class="mini solid">Enable everything</button>
+        <button id="recommended" class="mini">Recommended only</button>
+      </div>
+      <div id="lists"></div>
+    </section>
+
+    <section class="card">
+      <h2>Protection</h2>
+      <label class="row">
+        <div><b>Hide ads &amp; banners (cosmetic filtering)</b><div class="hint">Removes leftover ad boxes, cookie notices and popups the network layer can't.</div></div>
+        <label class="switch"><input type="checkbox" id="cosmetic" checked /><span class="slider"></span></label>
+      </label>
+      <label class="row">
+        <div><b>Strip tracking parameters from URLs</b><div class="hint">Removes <code>utm_*</code>, <code>fbclid</code>, <code>gclid</code> and 40+ others from links you open.</div></div>
+        <label class="switch"><input type="checkbox" id="tracking" checked /><span class="slider"></span></label>
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Subscribe to more filter lists</h2>
+      <p class="hint">Add any uBlock/Adblock-format list by URL (e.g. a regional list). AdSweep fetches and converts it on your device. Each list shares Chrome's dynamic-rule budget (~30k), so very large lists are capped.</p>
+      <div class="list-actions">
+        <input id="subUrl" type="url" placeholder="https://example.com/list.txt" />
+        <button id="addSub" class="mini solid">Add list</button>
+        <button id="updateSubs" class="mini">Update now</button>
+      </div>
+      <p class="hint">Subscribed lists auto-update every 3 days. <span id="subMsg" class="saved"></span></p>
+      <div id="subs"></div>
+    </section>
+
+    <section class="card">
+      <h2>Top blocked domains</h2>
+      <p class="hint">The trackers and ad servers AdSweep has stopped most often.</p>
+      <div id="topDomains" class="topdomains"></div>
+    </section>
+
+    <section class="card">
+      <h2>Backup</h2>
+      <p class="hint">Export all your settings, custom filters, allowlist and subscriptions to a file — import it on another computer.</p>
+      <div class="list-actions">
+        <button id="exportBtn" class="mini solid">Export settings</button>
+        <button id="importBtn" class="mini">Import settings</button>
+        <input id="importFile" type="file" accept="application/json,.json" hidden />
+        <span id="backupMsg" class="saved"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>My filters</h2>
+      <p class="hint">Your own rules, one per line. Examples:
+        <code>||ads.example.com^</code> (block a domain) ·
+        <code>example.com##.banner</code> (hide an element) ·
+        <code>example.com##+js(set-constant, adblock, false)</code> (neutralize a script) ·
+        <code>@@||example.com^</code> (allow). The element picker adds rules here automatically.</p>
+      <p class="hint">Stuck on a "disable your ad blocker" wall? Add <code>site.com##+js(unwall)</code> — it strips the dark overlay and restores scrolling. You can also force scrolling with <code>site.com##body:style(overflow: auto !important)</code>.</p>
+      <textarea id="customFilters" spellcheck="false" placeholder="! Write your filters here"></textarea>
+      <div class="list-actions"><button id="saveCustom" class="mini solid">Save filters</button><span id="customSaved" class="saved"></span></div>
+    </section>
+
+    <section class="card">
+      <h2>Sites you've turned off</h2>
+      <div id="allowlist" class="allowlist"><p class="hint" id="noneAllowed">None — AdSweep is active everywhere.</p></div>
+    </section>
+
+    <footer>
+      AdSweep <span id="ver"></span> · uses EasyList, EasyPrivacy, AdGuard &amp; uBlock Origin community filter lists ·
+      no account, no tracking, no network calls of its own.
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

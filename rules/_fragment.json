@@ -1,0 +1,64 @@
+{
+  "rule_resources": [
+    {
+      "id": "ads",
+      "enabled": false,
+      "path": "rules/ads.json"
+    },
+    {
+      "id": "privacy",
+      "enabled": false,
+      "path": "rules/privacy.json"
+    },
+    {
+      "id": "adguard",
+      "enabled": false,
+      "path": "rules/adguard.json"
+    },
+    {
+      "id": "cookies",
+      "enabled": true,
+      "path": "rules/cookies.json"
+    },
+    {
+      "id": "annoyances",
+      "enabled": false,
+      "path": "rules/annoyances.json"
+    },
+    {
+      "id": "social",
+      "enabled": false,
+      "path": "rules/social.json"
+    },
+    {
+      "id": "badware",
+      "enabled": true,
+      "path": "rules/badware.json"
+    },
+    {
+      "id": "privacyubo",
+      "enabled": true,
+      "path": "rules/privacyubo.json"
+    },
+    {
+      "id": "resource",
+      "enabled": true,
+      "path": "rules/resource.json"
+    },
+    {
+      "id": "anticv",
+      "enabled": true,
+      "path": "rules/anticv.json"
+    },
+    {
+      "id": "quickfixes",
+      "enabled": true,
+      "path": "rules/quickfixes.json"
+    },
+    {
+      "id": "unbreak",
+      "enabled": true,
+      "path": "rules/unbreak.json"
+    }
+  ]
+}

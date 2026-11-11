@@ -1,0 +1,49 @@
+#adsweep-hl {
+  position: fixed;
+  z-index: 2147483646;
+  background: rgba(59, 130, 246, 0.25);
+  border: 2px solid #3b82f6;
+  pointer-events: none;
+  display: none;
+  box-sizing: border-box;
+  transition: all .04s linear;
+}
+#adsweep-hl.picked { background: rgba(239, 68, 68, 0.25); border-color: #ef4444; }
+
+#adsweep-bar {
+  position: fixed;
+  z-index: 2147483647;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: #19202e;
+  color: #eef1f7;
+  font: 13px/1.4 -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 90vw;
+}
+#adsweep-bar code {
+  background: #0f1420;
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: #3ddc97;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#adsweep-bar button {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin-left: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#adsweep-hide { background: #ef4444; color: #fff; }
+#adsweep-cancel { background: #2a3142; color: #eef1f7; }

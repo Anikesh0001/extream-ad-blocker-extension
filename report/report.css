@@ -1,0 +1,25 @@
+:root { --bg:#0f1420; --card:#19202e; --card2:#212a3b; --text:#eef1f7; --muted:#94a0b4; --accent:#3b82f6; --accent2:#22c55e; --danger:#ef4444; }
+@media (prefers-color-scheme: light){ :root{ --bg:#f5f7fb;--card:#fff;--card2:#eef1f7;--text:#121722;--muted:#5b667a; } }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,"Segoe UI",Roboto,system-ui,sans-serif; background:var(--bg); color:var(--text); padding:24px 16px; }
+.wrap { max-width:640px; margin:0 auto; }
+header { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+h1 { font-size:22px; word-break:break-all; }
+.pill { font-size:12px; font-weight:700; padding:4px 10px; border-radius:999px; background:#22c55e22; color:var(--accent2); }
+.pill.off { background:#ef444422; color:var(--danger); }
+.grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:16px; }
+.stat { background:var(--card); border-radius:14px; padding:14px; text-align:center; }
+.stat .n { font-size:24px; font-weight:800; color:var(--accent); }
+.stat .l { font-size:11px; color:var(--muted); margin-top:3px; }
+.card { background:var(--card); border-radius:16px; padding:18px; margin-bottom:14px; }
+h2 { font-size:15px; margin-bottom:10px; }
+.domains .d { display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #ffffff10; font-size:13px; }
+.domains .d:first-child { border-top:none; }
+.domains .d .n { color:var(--danger); font-weight:700; }
+.domains .d span:first-child { font-family:ui-monospace,Menlo,monospace; word-break:break-all; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chips .chip { background:var(--card2); color:var(--text); padding:3px 9px; border-radius:999px; font-size:12px; font-family:ui-monospace,Menlo,monospace; }
+.empty { color:var(--muted); font-size:13px; }
+.hint { color:var(--muted); font-size:12px; margin-top:8px; }
+footer { color:var(--muted); font-size:12px; display:flex; align-items:center; gap:10px; margin-top:6px; }
+.btn { background:var(--card2); color:var(--text); border:none; border-radius:8px; padding:7px 14px; cursor:pointer; font-size:13px; }

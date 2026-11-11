@@ -1,0 +1,7 @@
+.cache/
+node_modules/
+dist/
+*.zip
+# Chrome writes this into an unpacked dir when it loads it
+_metadata/
+.DS_Store

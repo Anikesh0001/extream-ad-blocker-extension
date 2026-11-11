@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdSweep — site report</title>
+  <link rel="stylesheet" href="report.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 id="host">This site</h1>
+      <span id="status" class="pill"></span>
+    </header>
+    <div class="grid">
+      <div class="stat"><div class="n" id="blocked">0</div><div class="l">requests blocked here</div></div>
+      <div class="stat"><div class="n" id="cosmetic">0</div><div class="l">elements hidden</div></div>
+      <div class="stat"><div class="n" id="scripts">0</div><div class="l">scripts neutralized</div></div>
+      <div class="stat"><div class="n" id="lists">0</div><div class="l">filter lists active</div></div>
+    </div>
+
+    <section class="card">
+      <h2>Blocked on this page</h2>
+      <div id="domains" class="domains"><p class="empty">Nothing blocked yet. Reload the page to capture requests from the start.</p></div>
+    </section>
+
+    <section class="card" id="scriptCard" hidden>
+      <h2>Anti-ad scripts running here</h2>
+      <div id="scriptList" class="chips"></div>
+      <p class="hint">These neutralize ad / anti-adblock code (e.g. "disable your ad blocker" walls).</p>
+    </section>
+
+    <footer><button id="refresh" class="btn">Refresh</button> AdSweep <span id="ver"></span></footer>
+  </div>
+  <script src="report.js"></script>
+</body>
+</html>

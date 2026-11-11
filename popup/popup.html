@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="../icons/icon48.png" alt="" width="24" height="24" />
+      <span>AdSweep</span>
+    </div>
+    <button id="settings" class="icon-btn" title="Settings" aria-label="Settings">⚙</button>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="count" id="tabCount">0</div>
+    <div class="count-label">blocked on this page</div>
+  </section>
+
+  <section class="site">
+    <div class="site-row">
+      <div>
+        <div class="site-host" id="siteHost">this site</div>
+        <div class="site-state" id="siteState">Protection on</div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="siteToggle" checked />
+        <span class="slider"></span>
+      </label>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="stat-num" id="statToday">0</div>
+      <div class="stat-lbl">today</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="statTotal">0</div>
+      <div class="stat-lbl">all time</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" id="statLists">0</div>
+      <div class="stat-lbl">lists on</div>
+    </div>
+  </section>
+
+  <section class="actions">
+    <button id="unwallBtn" class="btn solid">🧹 Clear "disable ad blocker" wall</button>
+    <div class="btn-row">
+      <button id="pickBtn" class="btn ghost">⊕ Block element</button>
+      <button id="zapBtn" class="btn ghost">⚡ Zap once</button>
+    </div>
+    <button id="pauseBtn" class="btn ghost">Pause 30 min everywhere</button>
+    <label class="opt-row">
+      <span>Hide ads &amp; banners (cosmetic)</span>
+      <label class="switch sm"><input type="checkbox" id="cosmeticToggle" checked /><span class="slider"></span></label>
+    </label>
+    <div class="links">
+      <button id="reportBtn" class="btn link">Site report →</button>
+      <button id="logBtn" class="btn link">Network log →</button>
+      <button id="openOptions" class="btn link">Settings →</button>
+    </div>
+  </section>
+
+  <footer id="paused" hidden>⏸ Paused — <a href="#" id="resume">resume now</a></footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
